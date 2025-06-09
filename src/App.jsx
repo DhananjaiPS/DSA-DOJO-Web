@@ -18,10 +18,10 @@ function App() {
   const [isEvaluating, setIsEvaluating] = useState(false);
 
   const [loading, setLoading] = useState(false);
-  setTimeout(() => {
-    setLoading(false);
-    window.location.href = "/login"; // Redirect to login
-  }, 10000);
+  // setTimeout(() => {
+  //   setLoading(false);
+  //   window.location.href = "/login"; // Redirect to login
+  // }, 10000);
   const handleClick = () => {
     setLoading(true);
     setTimeout(() => {
