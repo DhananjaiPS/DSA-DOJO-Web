@@ -177,7 +177,7 @@ function App() {
             </button>
           </div>
 
-          <div className="flex flex-col items-end px-8 space-y-6 mt-10 text-white">
+          <div className="flex flex-col items-start px-8 space-y-6 mt-10 text-white">
             <a href="#home" className="text-xl hover:text-blue-400 transition" onClick={() => setIsMenuOpen(false)}>Home</a>
             <a href="#about" className="text-xl hover:text-blue-400 transition" onClick={() => setIsMenuOpen(false)}>About Us</a>
             <a href="#contact" className="text-xl hover:text-blue-400 transition" onClick={() => setIsMenuOpen(false)}>Contact</a>
@@ -206,10 +206,10 @@ function App() {
         <img src={heroImage} alt="AI DSA Instructor" className="w-full h-96 object-cover opacity-40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-4">
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="pt-16 pb-5 text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
               Master Data Structures & Algorithms
             </h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className=" text-xl mb-8 max-w-2xl mx-auto">
               AI-powered learning platform to help you conquer coding interviews
             </p>
             {!isAuthenticated && (
@@ -387,11 +387,11 @@ function App() {
 
       {/* Features Section */}
       <div className="container mx-auto py-16 px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center mb-12 md:mb-16 font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+        <h2 className="pb-10 text-3xl md:text-4xl lg:text-5xl text-center mb-12 md:mb-16 font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
           Supercharge Your <span className="text-white">DSA Journey</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {[
             {
               icon: (
@@ -489,47 +489,55 @@ function App() {
                     <br />
                     <span className="text-white">Learning Methods</span>
                   </h2>
-                  <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-8"></div>
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <div className="w-13 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-8"></div>
+                  <p className="w-13 text-lg text-gray-300 leading-relaxed">
                     We're pioneering the future of technical interview preparation with adaptive AI that understands your unique learning patterns.
                   </p>
                 </div>
 
                 {/* Interactive stats */}
-                <div className="md:w-2/5 grid grid-cols-2 gap-6">
-                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors group">
+                <div className="flex flex-wrap justify-center gap-6 md:w-2/5 mx-auto">
+                  {/* Developers Trained */}
+                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors group w-[140px] sm:w-[160px]">
                     <div className="text-4xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                       <CountUp end={100} duration={2} separator="," />+
                     </div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">
+                    <div className="text-sm text-gray-400 uppercase tracking-wider text-center">
                       Developers Trained
                     </div>
                   </div>
-                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-colors group">
+
+                  {/* Success Rate */}
+                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-colors group w-[140px] sm:w-[160px]">
                     <div className="text-4xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                       <CountUp end={92} duration={2} />%
                     </div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">
+                    <div className="text-sm text-gray-400 uppercase tracking-wider text-center">
                       Success Rate
                     </div>
                   </div>
-                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-colors group">
+
+                  {/* Hours of Content */}
+                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-colors group w-[140px] sm:w-[160px]">
                     <div className="text-4xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
                       <CountUp end={500} duration={2} />+
                     </div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">
+                    <div className="text-sm text-gray-400 uppercase tracking-wider text-center">
                       Hours of Content
                     </div>
                   </div>
-                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-colors group">
+
+                  {/* AI Availability */}
+                  <div className="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-colors group w-[140px] sm:w-[160px]">
                     <div className="text-4xl font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
                       <CountUp end={24} duration={2} />/7
                     </div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">
+                    <div className="text-sm text-gray-400 uppercase tracking-wider text-center">
                       AI Availability
                     </div>
                   </div>
                 </div>
+
               </div>
 
               {/* Mission and Team sections with hover effects */}
@@ -662,9 +670,9 @@ function App() {
                       e.preventDefault();
                       alert("Message sent successfully :) Keep Exploring!");
                     }}
-                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+                    className="text-2xl w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
                   >
-                    🚀 Send Message
+                     Contact Us
                   </button>
                 </form>
               </div>
