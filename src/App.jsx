@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import CountUp from 'react-countup';
-// import logo from './logo.svg'; // Replace with your logo
-// import heroImage from '../'; // Add a dark-themed hero image
+import heroImage from './assets/heropic.jpg'; // Add a dark-themed hero image
 
 function App() {
   const { loginWithRedirect, user, isAuthenticated, isLoading, logout } = useAuth0();
@@ -204,7 +203,7 @@ function App() {
 
       {/* Hero Section */}
       <div className="relative pt-20 md:pt-24">
-        <img src='heropic.jpg' alt="AI DSA Instructor" className="w-full h-96 object-cover opacity-40" />
+        <img src={heroImage} alt="AI DSA Instructor" className="w-full h-96 object-cover opacity-40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-4">
             <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
